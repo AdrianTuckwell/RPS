@@ -15,6 +15,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name=".ActivityPlay"
+            android:label="@string/activity_play_title"
+            android:parentActivityName=".WelcomeActivity">
+        </activity>
+
+        <activity
+            android:name=".ActivityResult"
+            android:label="@string/activity_result_title"
+            android:parentActivityName=".ActivityPlay">
+        </activity>
+
+
+
     </application>
 
 </manifest>

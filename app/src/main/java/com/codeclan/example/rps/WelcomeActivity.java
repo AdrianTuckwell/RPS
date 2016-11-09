@@ -22,6 +22,8 @@ public class WelcomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        mPlayButton = (Button)findViewById(R.id.play_button);
+
         mPlayButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
