@@ -19,6 +19,7 @@ public class ActivityPlay extends AppCompatActivity{
     Button mPaperButton;
     Button mScissorsButton;
 
+
     @Override
     protected void  onCreate(Bundle savedInstanceState){
 
@@ -34,7 +35,11 @@ public class ActivityPlay extends AppCompatActivity{
             public void onClick(View view)
             {
                 Log.d("RPS", "Rock button Pressed");
+
+                String rock = "Rock";
+
                 Intent intent = new Intent(ActivityPlay.this, ActivityResult.class);
+                intent.putExtra("play",rock);
                 startActivity(intent);
             }
         });
@@ -47,7 +52,11 @@ public class ActivityPlay extends AppCompatActivity{
             public void onClick(View view)
             {
                 Log.d("RPS", "Paper button Pressed");
+
+                String paper = "Paper";
+
                 Intent intent = new Intent(ActivityPlay.this, ActivityResult.class);
+                intent.putExtra("play",paper);
                 startActivity(intent);
             }
         });
@@ -59,7 +68,10 @@ public class ActivityPlay extends AppCompatActivity{
             public void onClick(View view)
             {
                 Log.d("RPS", "Scissors button Pressed");
+                String scissors = "Scissors";
+
                 Intent intent = new Intent(ActivityPlay.this, ActivityResult.class);
+                intent.putExtra("play",scissors);
                 startActivity(intent);
             }
         });

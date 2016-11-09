@@ -29,10 +29,21 @@ public class ActivityResult extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        //String result = extras.getString("result");
-        String result = "Bobby played Rock, Computer played Scissors:  Bobby Wins!!!";
-        mResultText.setText(result);
+        String play = extras.getString("play");
 
+        RockPaperScissors game = new RockPaperScissors(play);
+
+        String result = game.getResult();
+
+
+
+
+
+
+//        String result = "Bobby played Rock, Computer played Scissors:  Bobby Wins!!!";
+
+
+        mResultText.setText(result);
 
 
         mReturnButton = (Button) findViewById(R.id.return_button);
